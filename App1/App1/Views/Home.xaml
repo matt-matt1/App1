@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.Home"
+             Title="Yuma Technical Inc."
+             xmlns:local="clr-namespace:App1;"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             ControlTemplate="{StaticResource YumaHeader}">
+ <!--
+             Backable="false"
+-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="YumaIcon" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource YumaRed}" />
+                <Setter Property="FontFamily" Value="FontAwesome" />
+                <Setter Property="FontSize" Value="Large" />
+            </Style>
+            <Style x:Key="YumaIconShadow" TargetType="Label">
+                <!--BasedOn="YumaIcon">-->
+                <Setter Property="FontFamily" Value="FontAwesome" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TranslationX" Value="2" />
+                <Setter Property="TranslationY" Value="2" />
+                <Setter Property="TextColor" Value="{StaticResource YumaYel}" />
+            </Style>
+            <Style x:Key="YumaLabel" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource YumaRed}" />
+                <Setter Property="FontFamily" Value="FontAwesome" />
+                <Setter Property="FontSize" Value="Default" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Margin" Value="3" />
+            </Style>
+            <Style x:Key="YumaLabelShadow" TargetType="Label">
+                <!--BasedOn="YumaLabel">-->
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="FontFamily" Value="FontAwesome" />
+                <Setter Property="FontSize" Value="Default" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TranslationX" Value="1" />
+                <Setter Property="TranslationY" Value="1" />
+                <Setter Property="TextColor" Value="{StaticResource YumaYel}" />
+                <Setter Property="Margin" Value="3" />
+            </Style>
+
+            <Style x:Key="Caption1" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource YumaYel}" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="Margin" Value="80, 160, 0, 0" />
+            </Style>
+            <Style x:Key="Caption1Out" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource YumaRed}" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="Margin" Value="80, 160, 0, 0" />
+            </Style>
+            <Style x:Key="Caption1Shadow" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkGray" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="Margin" Value="80, 160, 0, 0" />
+            </Style>
+            <Style x:Key="Caption1Shadow2" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="Margin" Value="80, 160, 0, 0" />
+            </Style>
+            <Style x:Key="Caption2" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="{StaticResource YumaYel}" />
+                <Setter Property="Margin" Value="80, 200, 0, 0" />
+            </Style>
+            <Style x:Key="Caption2Out" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource YumaRed}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="Margin" Value="80, 200, 0, 0" />
+            </Style>
+            <Style x:Key="Caption2Shadow" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkGray" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="Margin" Value="80, 200, 0, 0" />
+            </Style>
+            <Style x:Key="Caption2Shadow2" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="Margin" Value="80, 200, 0, 0" />
+            </Style>
+            <!--<Style x:Key="YumaButton" TargetType="Button" />-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStack">
+            <!-- logo img -->
+            <Image x:Name="Yuma_Technical_logo" WidthRequest="250" HorizontalOptions="Center" Source="{local:ImageResource App1.Images.logo.good3.png}" />
+
+            <!-- img slider -->
+            <!--<ContentView x:Name="YumaCarousel" />-->
+            
+            <Grid ColumnSpacing="0" RowSpacing="0" Margin="0" Padding="0">
+                <ScrollView Orientation="Horizontal" x:Name="sliderScroll" Margin="0" Padding="0">
+                    <StackLayout Spacing="0" Orientation="Horizontal" x:Name="sliderStack" Margin="0" Padding="0">
+                        <Grid x:Name="slide_1" Margin="0" Padding="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PrintersButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Printers_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-printers.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Printers_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Laser Printers" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Laser Printers" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1}" />
+                                <!--IsVisible="False"-->
+                            </Grid>
+                        </Grid>
+                        <Grid x:Name="slide_2">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TonersButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Cartridges_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-cartridges.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Toners_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1}" /> <!--IsVisible="False"-->
+                            </Grid>
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Toners_txt2slider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="That Last" Style="{StaticResource Caption2Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="That Last" Style="{StaticResource Caption2Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="That Last" Style="{StaticResource Caption2}" /> <!--IsVisible="False"-->
+                            </Grid>
+                        </Grid>
+                        <Grid x:Name="slide_3">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LaptopsButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Laptops_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-laptops.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Laptops_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Computer Laptops" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Computer Laptops" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1}" />
+                            </Grid>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
+            <!-- grid of icons -->
+            <Grid RowSpacing="0" ColumnSpacing="0" x:Name="GridIcons" HeightRequest="600">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <!-- first icon row -->
+                <Grid Grid.Column="1" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf015;" Style="{StaticResource YumaIconShadow}" />
+                    <!--FontFamily="FontAwesome" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource YumaYel}" TranslationX="1" TranslationY="1" />-->
+                    <Label Text="&#xf015;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Website (English)" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <!--HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="{StaticResource YumaYel}" TranslationX="1" TranslationY="1" />-->
+                    <Label Text="Website (English)" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <!--HorizontalTextAlignment="Center" VerticalTextAlignment="Start" TextColor="{StaticResource YumaRed}" />-->
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ENButton" Clicked="ENButton_Clicked" />
+                    <!--BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="0" />-->
+                </Grid>
+                
+                <Grid Grid.Column="3" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf005;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf005;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="About Us" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="About Us" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="AboutButton" Clicked="AboutButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="5" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf095;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf095;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Contact Us" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Contact Us" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ContactButton" Clicked="ContactButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="7" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf0ad;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf0ad;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Services" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Services" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ServicesButton" Clicked="ServicesButton_Clicked" />
+                </Grid>
+                <!-- bottom icon row -->
+                <Grid Grid.Column="1" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf024;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf024;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Website (French-Canadian)" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Website (French-Canadian)" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="QCButton" Clicked="QCButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="3" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf109;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf109;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Laptop Computers" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Laptop Computers" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="LaptopsButton" Clicked="LaptopsButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="5" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf02f;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf02f;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Laser Printers" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Laser Printers" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="PrintersButton" Clicked="PrintersButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="7" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf150;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf150;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Toner Cartridges" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Toner Cartridges" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="TonersButton" Clicked="TonersButton_Clicked" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

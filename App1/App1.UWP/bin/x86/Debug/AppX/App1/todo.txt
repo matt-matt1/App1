@@ -1,0 +1,20 @@
+﻿home:
+*DONE* reduce caption1 font size
+*DONE* thin red border, yellow text
+*DONE* add click event to slider
+*DONE* request more height for icons grid
+websites:
+remove mybanner for mobile -prestashop ???
+load css properly
+contact:
+image crop by device.size from center
+services:
+prevent fire twice
+put image+desc as html in webview
+hamburger(menu):
+*DONE* list of pages
+convert target string into page, for navigation
+revert buttons - hide x, show =
+//bind button controlTemplate.overlay isvisible, controlTemplate.drawer animate slide in from right
+nav.back:
+bind button isvisible - true unless on root page then false

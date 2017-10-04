@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.EN"
+             xmlns:local="clr-namespace:App1;"
+             ControlTemplate="{StaticResource YumaHeader}"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             Title="Website (English)">
+    <ContentPage.Content>
+        <Grid>
+            <Image Grid.Row="0" Grid.Column="0" x:Name="Loading" Source="{local:ImageResource App1.Images.loader.gif}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsVisible="False" />
+            <WebView Grid.Row="0" Grid.Column="0" Source="http://yumatechnical.com/en/" Navigating="OnNavigating" Navigated="OnNavigated" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

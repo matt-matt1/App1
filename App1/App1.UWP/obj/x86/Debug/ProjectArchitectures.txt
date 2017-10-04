@@ -1,0 +1,2 @@
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\App1.UWP.csproj;x86
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\App1.csproj;neutral

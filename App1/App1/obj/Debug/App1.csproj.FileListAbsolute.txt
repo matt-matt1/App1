@@ -1,0 +1,133 @@
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\App1.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\App1.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Iconize.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLite-net.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Net.Http.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Maps.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.iOS.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Core.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Mono.Security.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Xml.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Iconize.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Iconize.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLite-net.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\SQLite-net.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Net.Http.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Maps.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Xamarin.iOS.xml
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Core.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\Mono.Security.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\bin\Debug\System.Xml.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.MainPage.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.App.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Home.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Contact.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.About.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Services.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.QC.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Laptops.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Printers.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.Toners.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.Views.EN.xaml.g.cs
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.dll
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.pdb
+C:\Users\Yuma\source\repos\App1\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\App1.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\App1.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FFImageLoading.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FFImageLoading.Platform.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Iconize.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLite-net.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Net.Http.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Maps.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.iOS.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Core.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Mono.Security.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Xml.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FFImageLoading.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FFImageLoading.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FFImageLoading.Platform.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\FormsPlugin.Iconize.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Connectivity.Abstractions.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Iconize.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Iconize.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Messaging.Abstractions.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLite-net.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\SQLite-net.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Net.Http.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Maps.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Xamarin.iOS.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Core.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Mono.Security.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\System.Xml.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.MainPage.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.App.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Home.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Contact.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.About.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Services.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.QC.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Laptops.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Printers.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.Toners.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.EN.xaml.g.cs
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.pdb

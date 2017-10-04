@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Plugin.Iconize.FontAwesome" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Plugin.Iconize.FontAwesome">
+				<NamedResource name="iconize-fontawesome.ttf" uri="ms-resource://Plugin.Iconize.FontAwesome/Files/Plugin.Iconize.FontAwesome/iconize-fontawesome.ttf">
+					<Candidate type="Path">
+						<Value>Plugin.Iconize.FontAwesome\iconize-fontawesome.ttf</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

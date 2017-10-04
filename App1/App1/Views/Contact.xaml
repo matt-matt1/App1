@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.Contact"
+             xmlns:local="clr-namespace:App1;"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             ControlTemplate="{StaticResource YumaHeader}"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             Title="Contact Us">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="YumaGray" TargetType="Label">
+                <Setter Property="TextColor" Value="#777" />
+                <!--<Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />-->
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontFamily" Value="FontAwesome" />
+            </Style>
+            <Style x:Key="YumaInfo" TargetType="Label">
+                <Setter Property="TextColor" Value="#aa0018" />
+                <!--<Setter Property="HorizontalTextAlignment" Value="Start" />-->
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="Margin" Value="0, 10, 0, 10" />
+            </Style>
+            <!--<Style x:Key="YumaButton" TargetType="Button" />-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout x:Name="stack">
+            <!--<Image Grid.Row="0" Grid.Column="0" x:Name="Loading" Source="{local:ImageResource App1.Images.loader.gif}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsVisible="False" />-->
+            <!-- Info -->
+            <Grid ColumnSpacing="0" RowSpacing="0" Margin="50, 10, 10, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="&#xf095;" Style="{StaticResource YumaGray}" />
+                <Label Grid.Row="0" Grid.Column="2" Text="{x:Static local:Settings.Address}" Style="{StaticResource YumaInfo}" />
+                <!--<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource YumaButton}" />-->
+                <Label Grid.Row="1" Grid.Column="0" Text="&#xf041;" Style="{StaticResource YumaGray}" />
+                <Label Grid.Row="1" Grid.Column="2" Text="{x:Static local:Settings.Phone}" Style="{StaticResource YumaInfo}" />
+                <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="addressButton" Style="{StaticResource YumaButton}" />
+                <Label Grid.Row="2" Grid.Column="0" Text="&#xf0e0;" Style="{StaticResource YumaGray}"/>
+                <Label Grid.Row="2" Grid.Column="2" Text="{x:Static local:Settings.Email}" Style="{StaticResource YumaInfo}" />
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" x:Name="emailButton" Style="{StaticResource YumaButton}" />
+            </Grid>
+
+            <!-- Static map image -->
+            <!--<RelativeLayout x:Name="tempImgRL">
+                <BoxView Color="Green" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Factor=1, Property=Width}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Factor=1, Property=Height}" />-->
+                <Image x:Name="mapStaticImage" HorizontalOptions="Center"
+                       VerticalOptions="Center" Source="{local:ImageResource App1.Images.map.jpg}" />
+            <!--</RelativeLayout>-->
+            <!--
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=Device.Width*0.5}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.5, Constant=Device.Height*0.5}"
+            -->
+            <!--<maps2:BindableMap MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />-->
+            <!--<maps:Map x:Name="mymap" MapType="Street" >
+                -->
+            <!--IsVisible="False"-->
+            <!--
+            </maps:Map>-->
+
+            <!-- Form -->
+            <StackLayout Padding="10" BackgroundColor="{StaticResource YumaPanel}" Margin="10">
+                <StackLayout Padding="1" BackgroundColor="#eee">
+                    <Grid ColumnSpacing="0" RowSpacing="10" Margin="1" Padding="10" BackgroundColor="{StaticResource YumaPanel}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="20" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="SubjectLabel" HorizontalTextAlignment="End" VerticalTextAlignment="Center" x:Name="SubjectLabel" />
+                        <Picker Grid.Row="0" Grid.Column="2" ItemsSource="{x:Static local:Settings.Subjects}" SelectedIndex="0" BackgroundColor="{StaticResource YumaBG}" x:Name="Subject" SelectedIndexChanged="OnPickerSelectedIndexChanged" />
+                        <!--Title="Select your Subject"-->
+                        <Label Grid.Row="1" Grid.Column="0" Text="FromEmailLabel" HorizontalTextAlignment="End" VerticalTextAlignment="Center" x:Name="FromEmailLabel" />
+                        <Entry Grid.Row="1" Grid.Column="2" BackgroundColor="{StaticResource YumaBG}" x:Name="FromEmailAddress" />
+                        <!--
+                            <Label Grid.Row="2" Grid.Column="0" Text="Attachment" HorizontalTextAlignment="End" />
+                            <StackLayout Orientation="Horizontal">
+                            <Picker Grid.Row="2" Grid.Column="1" BackgroundColor="#ccc" />
+                            <Button Text="CHOOSE FILE" />
+                            </StackLayout>
+                            -->
+                        <Label Grid.Row="2" Grid.Column="0" Text="MessageLabel" HorizontalTextAlignment="End" VerticalTextAlignment="Center" x:Name="MessageLabel" />
+                        <Editor Grid.Row="2" Grid.Column="2" Focused="Message_Focused" Unfocused="Message_Unfocused" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaBG}" x:Name="Message" />
+                        <Button Grid.Row="4" Grid.Column="2" VerticalOptions="End" Text="Send" HorizontalOptions="End" BackgroundColor="{StaticResource YumaYel}" TextColor="White" x:Name="Send">
+                        </Button>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+    

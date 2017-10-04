@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.Printers"
+             xmlns:local="clr-namespace:App1;"
+             ControlTemplate="{StaticResource YumaHeader}"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             Title="Laser Printers">
+    <ContentPage.Content>
+        <Grid>
+            <Image Grid.Row="0" Grid.Column="0" x:Name="Loading" Source="{local:ImageResource App1.Images.loader.gif}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsVisible="False" />
+            <ListView x:Name="list" ItemTemplate="{StaticResource RSSDataTemplate}" BackgroundColor="White" SeparatorColor="{StaticResource YumaYel}" Margin="5" IsVisible="False" IsPullToRefreshEnabled="True" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

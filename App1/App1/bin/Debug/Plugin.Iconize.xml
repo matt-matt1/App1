@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Iconize</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Iconize.IconButton">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconButton" /> control.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.Button" />
+        </member>
+        <member name="T:Plugin.Iconize.IconCarouselPage">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconCarouselPage" /> page.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.CarouselPage" />
+        </member>
+        <member name="M:Plugin.Iconize.IconCarouselPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconCarouselPage" /> class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconCarouselPage.OnCurrentPageChanged(System.Object,System.EventArgs)">
+            <summary>
+            Called when [current page changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="T:Plugin.Iconize.IconImage">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconImage" /> control.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.Image" />
+        </member>
+        <member name="F:Plugin.Iconize.IconImage.AutoSize">
+            <summary>
+            When the property <see cref="P:Plugin.Iconize.IconImage.IconSize" /> is set to this value, the icon size will match the Image Size.
+            </summary>
+        </member>
+        <member name="F:Plugin.Iconize.IconImage.IconProperty">
+            <summary>
+            Property definition for the <see cref="P:Plugin.Iconize.IconImage.Icon" /> Property
+            </summary>
+        </member>
+        <member name="F:Plugin.Iconize.IconImage.IconColorProperty">
+            <summary>
+            Property definition for the <see cref="P:Plugin.Iconize.IconImage.IconColor" /> Property
+            </summary>
+        </member>
+        <member name="F:Plugin.Iconize.IconImage.IconSizeProperty">
+            <summary>
+            Property definition for the <see cref="P:Plugin.Iconize.IconImage.IconSize" /> Property
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IconImage.Icon">
+            <summary>
+            Gets or sets the icon.
+            </summary>
+            <value>
+            The icon.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconImage.IconColor">
+            <summary>
+            Gets or sets the color of the icon.
+            </summary>
+            <value>
+            The color of the icon.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconImage.IconSize">
+            <summary>
+            Gets or sets the size of the icon.
+            </summary>
+            <value>
+            The size of the icon.
+            </value>
+        </member>
+        <member name="T:Plugin.Iconize.IconLabel">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconLabel" /> control.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.Label" />
+        </member>
+        <member name="T:Plugin.Iconize.IconNavigationPage">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconNavigationPage" /> page.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.NavigationPage" />
+        </member>
+        <member name="M:Plugin.Iconize.IconNavigationPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconNavigationPage" /> class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconNavigationPage.#ctor(Xamarin.Forms.Page)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconNavigationPage" /> class.
+            </summary>
+            <param name="root">The root page.</param>
+        </member>
+        <member name="M:Plugin.Iconize.IconNavigationPage.InitListeners">
+            <summary>
+            Initializes the event listeners.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconNavigationPage.OnNavigation(System.Object,Xamarin.Forms.NavigationEventArgs)">
+            <summary>
+            Called when [navigation].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.NavigationEventArgs"/> instance containing the event data.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Plugin.Iconize.IconTabbedPage">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconTabbedPage" /> page.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.TabbedPage" />
+        </member>
+        <member name="M:Plugin.Iconize.IconTabbedPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconTabbedPage" /> class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconTabbedPage.OnCurrentPageChanged(System.Object,System.EventArgs)">
+            <summary>
+            Called when [current page changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="T:Plugin.Iconize.IconToolbarItem">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconToolbarItem" /> control.
+            </summary>
+            <seealso cref="T:Xamarin.Forms.ToolbarItem" />
+        </member>
+        <member name="F:Plugin.Iconize.IconToolbarItem.UpdateToolbarItemsMessage">
+            <summary>
+            The update toolbar items message
+            </summary>
+        </member>
+        <member name="F:Plugin.Iconize.IconToolbarItem.IconColorProperty">
+            <summary>
+            Backing store for the <see cref="P:Plugin.Iconize.IconToolbarItem.IconColor" /> property.
+            </summary>
+        </member>
+        <member name="F:Plugin.Iconize.IconToolbarItem.IsVisibleProperty">
+            <summary>
+            Backing store for the <see cref="P:Plugin.Iconize.IconToolbarItem.IsVisible" /> property.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IconToolbarItem.IconColor">
+            <summary>
+            Gets or sets the color of the icon.
+            </summary>
+            <value>
+            The color of the icon.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconToolbarItem.IsVisible">
+            <summary>
+            Gets or sets a value indicating whether this toolbar item is visible.
+            </summary>
+            <value>
+            <c>true</c> if this toolbar item is visible; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:Plugin.Iconize.IconToolbarItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconToolbarItem" /> class.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconToolbarItem.OnCanExecuteChanged(System.Object,System.EventArgs)">
+            <summary>
+            Called when [can execute changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Plugin.Iconize.IconToolbarItem.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when [property changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Plugin.Iconize.IIcon">
+            <summary>
+            Icon represents one icon in an icon font.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IIcon.Key">
+            <summary>
+            The key of icon, for example 'fa-ok'
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Plugin.Iconize.IIcon.Character">
+            <summary>
+            The character matching the key in the font, for example '\u4354'
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Iconize.Icon">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Icon" /> type.
+            </summary>
+            <seealso cref="T:Plugin.Iconize.IIcon" />
+        </member>
+        <member name="P:Plugin.Iconize.Icon.Character">
+            <summary>
+            The character matching the key in the font, for example '\u4354'
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.Icon.Key">
+            <summary>
+            The key of icon, for example 'fa-ok'
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.Icon.#ctor(System.String,System.Char)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.Icon" /> class.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="character">The character.</param>
+        </member>
+        <member name="T:Plugin.Iconize.Iconize">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Iconize" /> type.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.Iconize.Modules">
+            <summary>
+            List of icon font descriptors
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.With(Plugin.Iconize.IIconModule)">
+            <summary>
+            Add support for a new icon font.
+            </summary>
+            <param name="module">The Icon Module holding the ttf file reference and its mappings.</param>
+            <returns>An initializer instance for chain calls.</returns>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.AddModule(Plugin.Iconize.IIconModule)">
+            <summary>
+            Adds the icon module.
+            </summary>
+            <param name="module">The module.</param>
+        </member>
+        <member name="T:Plugin.Iconize.Iconize.IconizeInitializer">
+            <summary>
+            Allows chain calls on <see cref="M:Plugin.Iconize.Iconize.With(Plugin.Iconize.IIconModule)" />.
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.IconizeInitializer.#ctor(Plugin.Iconize.IIconModule)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.Iconize.IconizeInitializer" /> class.
+            </summary>
+            <param name="iconFontDescriptor">The icon font descriptor.</param>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.IconizeInitializer.With(Plugin.Iconize.IIconModule)">
+            <summary>
+            Add support for a new icon font.
+            </summary>
+            <param name="iconFontDescriptor">The IconDescriptor holding the ttf file reference and its mappings.</param>
+            <returns>An initializer instance for chain calls.</returns>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.FindModuleOf(Plugin.Iconize.IIcon)">
+            <summary>
+            Finds the Typeface to apply for a given icon.
+            </summary>
+            <param name="icon">The icon for which you need the typeface.</param>
+            <returns>
+                The font descriptor which contains info about the typeface to apply, or null
+                if the icon cannot be found. In that case, check that you properly added the modules
+                using <see cref="M:Plugin.Iconize.Iconize.With(Plugin.Iconize.IIconModule)" /> prior to calling this method.
+            </returns>
+        </member>
+        <member name="M:Plugin.Iconize.Iconize.FindIconForKey(System.String)">
+            <summary>
+            Retrieve an icon from a key.
+            </summary>
+            <param name="iconKey">The icon key.</param>
+            <returns>The icon, or null if no icon matches the key</returns>
+        </member>
+        <member name="T:Plugin.Iconize.IconizeExtensions">
+            <summary>
+            Global extension methods for Iconize
+            </summary>
+        </member>
+        <member name="M:Plugin.Iconize.IconizeExtensions.Add(System.Collections.Generic.IList{Plugin.Iconize.IIcon},System.String,System.Char)">
+            <summary>
+            Adds the icon to the list.
+            </summary>
+            <param name="list">The list.</param>
+            <param name="key">The key.</param>
+            <param name="character">The character.</param>
+        </member>
+        <member name="M:Plugin.Iconize.IconizeExtensions.GetToolbarItems(Xamarin.Forms.Page)">
+            <summary>
+            Gets the toolbar items.
+            </summary>
+            <param name="page">The page.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Iconize.IIconModule">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IIconModule" /> interface.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IIconModule.Characters">
+            <summary>
+            The characters in the font.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IIconModule.FontFamily">
+            <summary>
+            Gets the font family.
+            </summary>
+            <value>
+            The font family.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IIconModule.FontName">
+            <summary>
+            Gets the name of the font.
+            </summary>
+            <value>
+            The name of the font.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IIconModule.FontPath">
+            <summary>
+            Gets the font path.
+            </summary>
+            <value>
+            The font path.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IIconModule.Keys">
+            <summary>
+            Gets or sets the keys.
+            </summary>
+            <value>
+            The keys.
+            </value>
+        </member>
+        <member name="M:Plugin.Iconize.IIconModule.GetIcon(System.String)">
+            <summary>
+            Gets the icon.
+            </summary>
+            <param name="iconKey">The icon key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Iconize.IIconModule.HasIcon(Plugin.Iconize.IIcon)">
+            <summary>
+            Determines whether the specified icon is in the set.
+            </summary>
+            <param name="icon">The icon.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.Iconize.IconModule">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.IconModule" /> type.
+            </summary>
+            <seealso cref="T:Plugin.Iconize.IIconModule" />
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.Characters">
+            <summary>
+            The characters in the font.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.FontFamily">
+            <summary>
+            Gets the font family.
+            </summary>
+            <value>
+            The font family.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.FontName">
+            <summary>
+            Gets the name of the font.
+            </summary>
+            <value>
+            The name of the font.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.FontPath">
+            <summary>
+            Gets the font path.
+            </summary>
+            <value>
+            The font path.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.Icons">
+            <summary>
+            Gets the icons.
+            </summary>
+            <value>
+            The icons.
+            </value>
+        </member>
+        <member name="P:Plugin.Iconize.IconModule.Keys">
+            <summary>
+            Gets or sets the keys.
+            </summary>
+            <value>
+            The keys.
+            </value>
+        </member>
+        <member name="M:Plugin.Iconize.IconModule.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Plugin.Iconize.IIcon})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.IconModule" /> class.
+            </summary>
+            <param name="fontFamily">The font family.</param>
+            <param name="fontName">Name of the font.</param>
+            <param name="fontPath">The font path.</param>
+            <param name="icons">The icons.</param>
+        </member>
+        <member name="M:Plugin.Iconize.IconModule.GetIcon(System.String)">
+            <summary>
+            Gets the icon.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Plugin.Iconize.IconModule.HasIcon(Plugin.Iconize.IIcon)">
+            <summary>
+            Determines whether the specified icon is in the set.
+            </summary>
+            <param name="icon">The icon.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

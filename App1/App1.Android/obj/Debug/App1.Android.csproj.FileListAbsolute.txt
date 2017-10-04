@@ -1,0 +1,24 @@
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\App1.Android.csprojResolveAssemblyReference.cache
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\proguard\dc663e480.txt
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\dc663e48.proguard.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\proguard\0757626b0.txt
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\0757626b.proguard.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\proguard\2f4d086a0.txt
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\2f4d086a.proguard.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\proguard\ea5c07c40.txt
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\XbdMerge\ea5c07c4.proguard.stamp
+C:\Users\Yuma\source\repos\App1\App1\App1.Android\obj\Debug\App1.Android.csproj.CoreCompileInputs.cache
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\App1.Android.csprojResolveAssemblyReference.cache
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\proguard\dc663e480.txt
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\dc663e48.proguard.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\0757626b.proguard.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\2f4d086a.proguard.stamp
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.Android\obj\Debug\XbdMerge\ea5c07c4.proguard.stamp
