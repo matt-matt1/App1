@@ -131,3 +131,8 @@ C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.T
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.Views.EN.xaml.g.cs
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.dll
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\obj\Debug\App1.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Geolocator.Abstractions.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Geolocator.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Geolocator.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Geolocator.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\Plugin.Geolocator.Abstractions.pdb

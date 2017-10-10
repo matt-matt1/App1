@@ -22,6 +22,9 @@ namespace App1
 
 		public static SQLiteConnection DB;
 		public static string[] DBErrors;
+		public static object collisionLock = new object();
+
+		public static bool Backable { get; set; } = true;
 
 		internal List<SettingsTbl> Settings { get; private set; }
 
@@ -33,6 +36,8 @@ namespace App1
 			this.BindingContext = new MyBindingContext();	//setup binds
 
 			InitializeComponent();
+
+			//LoadSettings();
 
 			//MainPage = new App1.MainPage();
 			MainPage = new NavigationPage(new Views.Home());
@@ -86,46 +91,71 @@ namespace App1
 			var menuGrid = ((Grid)menuButton.Parent);
 			var containButtons = ((StackLayout)menuGrid.Parent);
 			var containAll = ((Grid)containButtons.Parent);
+			var stack = ((StackLayout)containAll.Children[3]);
 			containAll.Children[2].IsVisible = true;//show overlay
 			menuButton.IsVisible = false;//hide
 			menuGrid.Children[1].IsVisible = true;//show menuclose
-			containAll.Children[3].TranslateTo(0, 0);//open drawer
-			var result = DB.CreateTable<MyPage>().ToString();
-			var pages = new List<MyPage>();
-			if (result=="Created")
+												  //containAll.Children[3].TranslateTo(0, 0, 500, Easing.CubicIn);//open drawer
+			stack.TranslateTo(0, 0, 500, Easing.CubicIn);
+			if (ScreenWidth > 1000)
 			{
-				pages = new List<MyPage>
-				{
-					new MyPage { Title = "Website (English)",            InGrid = true, Row = 1, Column = 1, Icon = "&#xf015;", InMenu = true, TargetEvent = "ENButton_Clicked",         Type = typeof(Views.EN).ToString() },
-					new MyPage { Title = "About Us",                     InGrid = true, Row = 1, Column = 3, Icon = "&#xf005;", InMenu = true, TargetEvent = "AboutButton_Clicked",      Type = typeof(Views.About).ToString() },
-					new MyPage { Title = "Contact Us",                   InGrid = true, Row = 1, Column = 5, Icon = "&#xf095;", InMenu = true, TargetEvent = "ContactButton_Clicked",    Type = typeof(Views.Contact).ToString() },
-					new MyPage { Title = "Services",                     InGrid = true, Row = 1, Column = 7, Icon = "&#xf0ad;", InMenu = true, TargetEvent = "ServicesButton_Clicked",   Type = typeof(Views.Services).ToString() },
-					new MyPage { Title = "Website (French-Canadian)",    InGrid = true, Row = 3, Column = 1, Icon = "&#xf024;", InMenu = true, TargetEvent = "QCButton_Clicked",         Type = typeof(Views.QC).ToString() },
-					new MyPage { Title = "Laptop Computers",             InGrid = true, Row = 3, Column = 3, Icon = "&#xf109;", InMenu = true, TargetEvent = "LaptopsButton_Clicked",    Type = typeof(Views.Laptops).ToString() },
-					new MyPage { Title = "Laser Printers",               InGrid = true, Row = 3, Column = 5, Icon = "&#xf02f;", InMenu = true, TargetEvent = "PrintersButton_Clicked",   Type = typeof(Views.Printers).ToString() },
-					new MyPage { Title = "Toner Cartridges",             InGrid = true, Row = 3, Column = 7, Icon = "&#xf150;", InMenu = true, TargetEvent = "TonersButton_Clicked",     Type = typeof(Views.Toners).ToString() }
-				};
-				//App.DB.Insert(MyPages);
-				int inserted = App.DB.InsertAll(pages);
-				if (pages.Count != inserted)
-				{
-					//DisplayAlert(Settings.Error, "Pages could not be inserted", Settings.Accept);
-				}
+				//containAll.Children[1].
+				//shrink main content
+				//in sync
+				//expand stack
 			}
-			else
-				pages = DB.Table<MyPage>().Where((x) => x.InMenu == true).ToList<MyPage>();
-			var list = ((ListView)containAll.Children[3]);
-			list.ItemsSource = pages;
-			list.ItemSelected += OnSelectPage;
+			lock (collisionLock)
+			{
+				//DB.DropTable<MyPage>();//only use to refresh db table
+				var result = DB.CreateTable<MyPage>().ToString();
+				var pages = new List<MyPage>();
+				if (result == "Created")
+				{
+					pages = new List<MyPage>
+					{
+						new MyPage { Title = "Website (English)",            InGrid = true, Row = 1, Column = 1, Icon = "", Unicode = "&#xf015;", InMenu = true, TargetEvent = "ENButton_Clicked",         Type = typeof(Views.EN).ToString() },
+						new MyPage { Title = "About Us",                     InGrid = true, Row = 1, Column = 3, Icon = "", Unicode = "&#xf005;", InMenu = true, TargetEvent = "AboutButton_Clicked",      Type = typeof(Views.About).ToString() },
+						new MyPage { Title = "Contact Us",                   InGrid = true, Row = 1, Column = 5, Icon = "", Unicode = "&#xf095;", InMenu = true, TargetEvent = "ContactButton_Clicked",    Type = typeof(Views.Contact).ToString() },
+						new MyPage { Title = "Services",                     InGrid = true, Row = 1, Column = 7, Icon = "", Unicode = "&#xf0ad;", InMenu = true, TargetEvent = "ServicesButton_Clicked",   Type = typeof(Views.Services).ToString() },
+						new MyPage { Title = "Website (French-Canadian)",    InGrid = true, Row = 3, Column = 1, Icon = "", Unicode = "&#xf024;", InMenu = true, TargetEvent = "QCButton_Clicked",         Type = typeof(Views.QC).ToString() },
+						new MyPage { Title = "Laptop Computers",             InGrid = true, Row = 3, Column = 3, Icon = "", Unicode = "&#xf109;", InMenu = true, TargetEvent = "LaptopsButton_Clicked",    Type = typeof(Views.Laptops).ToString() },
+						new MyPage { Title = "Laser Printers",               InGrid = true, Row = 3, Column = 5, Icon = "", Unicode = "&#xf02f;", InMenu = true, TargetEvent = "PrintersButton_Clicked",   Type = typeof(Views.Printers).ToString() },
+						new MyPage { Title = "Toner Cartridges",             InGrid = true, Row = 3, Column = 7, Icon = "", Unicode = "&#xf150;", InMenu = true, TargetEvent = "TonersButton_Clicked",     Type = typeof(Views.Toners).ToString() }
+					};
+					int inserted = App.DB.InsertAll(pages);
+					if (pages.Count != inserted)
+					{
+						//DisplayAlert(Settings.Error, "Pages could not be inserted", Settings.Accept);
+					}
+				}
+				else
+					pages = DB.Table<MyPage>().Where((x) => x.InMenu == true).ToList<MyPage>();
+				var list = ((ListView)stack.Children[0]);
+				list.Opacity = 0;
+				list.FadeTo(0, 500);
+				list.ItemsSource = pages;
+				list.FadeTo(1);
+				list.ItemSelected += OnSelectPage;
+			}
 		}
 		private void MenuClose_clicked(object sender, EventArgs e)
 		{
-			var menuButton = ((Button)sender);
-			var menuGrid = ((Grid)menuButton.Parent);
+			var menuCloseButton = ((Button)sender);
+			var menuButton = ((Button)((Grid)menuCloseButton.Parent).Children[0]);
+			var menuGrid = ((Grid)menuCloseButton.Parent);
 			var containButtons = ((StackLayout)menuGrid.Parent);
 			var containAll = ((Grid)containButtons.Parent);
-			containAll.Children[3].TranslateTo(420, 0);//close drawer
-			menuGrid.Children[1].IsVisible = false;//hide menuclose
+			if (ScreenWidth < 1000)
+			{
+				containAll.Children[3].TranslateTo(420, 0);//close drawer
+			} else
+			{
+				//expand main content
+				//in sync
+				//shrink stack
+				containAll.Children[3].TranslateTo(420, 0);//close drawer
+			}
+			menuCloseButton.IsVisible = false;//hide menuclose
 			menuButton.IsVisible = true;//show
 			containAll.Children[2].IsVisible = false;//hide overlay
 		}
@@ -143,110 +173,113 @@ namespace App1
 			{
 				var list = ((ListView)sender);
 				var sel = list.SelectedItem;
-				var target = ((MyPage)sel).TargetEvent;
-				//var dest = (Page)to;
+				var target = ((MyPage)sel).Type;
+				Type pagetype = Type.GetType(target);
 				list.SelectedItem = null;
-				//App.Current.MainPage.Navigation.PushAsync((Page)target());//new Views.Services());
-				MenuClose_clicked(this, EventArgs.Empty);
+				App.Current.MainPage.Navigation.PushAsync(Activator.CreateInstance(pagetype) as Page);//new Views.Services());
+				MenuClose_clicked(((Grid)((StackLayout)((Grid)((StackLayout)list.Parent).Parent).Children[0]).Children[2]).Children[1], e);
 			}
 		}
 
 
 		public void LoadSettings()
 		{
-			//App.DB.DropTable<SettingsTbl>();
-			var result = App.DB.CreateTable<SettingsTbl>().ToString();
-			//DisplayAlert(Settings.NoTitle, result, Settings.Accept);
-			var MySettings = new List<SettingsTbl>();
-			if (result == "Created")
+			lock (collisionLock)
 			{
-				//Pages.SetDefaultPages();
-				MySettings = new List<SettingsTbl>
+				//App.DB.DropTable<SettingsTbl>();
+				var result = App.DB.CreateTable<SettingsTbl>().ToString();
+				//DisplayAlert(Settings.NoTitle, result, Settings.Accept);
+				var MySettings = new List<SettingsTbl>();
+				if (result == "Created")
 				{
-					new SettingsTbl { Key = "MyLat", Value = "43.74434", Type = "double" },
-					new SettingsTbl { Key = "MyLong", Value = "-79.29542", Type = "double" },
-					new SettingsTbl { Key = "Address", Value = "24 Hancock Cres, Toronto, ON M1R 2A3" },
-					new SettingsTbl { Key = "Phone", Value = "(+1 647) 956-6145" },
-					new SettingsTbl { Key = "Email", Value = "sales@yumatechnical.com" },
-					new SettingsTbl { Key = "PinLabel", Value = "Home Office" },
-					new SettingsTbl { Key = "Subjects", Value = JsonConvert.SerializeObject(new List<string> { "Customer Service", "Webmaster" }), Type = "json" },
-					new SettingsTbl { Key = "UseInternetMsg", Value = "" },
-					//public static string UseInternetMsg = "We need Internet access for a moment";
-					new SettingsTbl { Key = "UseInternetFinishMsg", Value = "" },
-					//public static string UseInternetFinishMsg = "We completed Internet useage for this moment";
-					new SettingsTbl { Key = "GoogleMapsApi", Value = " AIzaSyBawJKrLXdLhOM1kFKcQiS7YyhhlcTpDbE" },
-					new SettingsTbl { Key = "BingBasicUWPKey", Value = "DUx1HdRMp2GwpUbWhZII~aNt9qFj0ryBsJhczkIlSgQ~Alxhd3MlkZpkaQkB2__tnR1mzeh9fvKHhJzmVBBbIpffTZsxrl2pkxu5f0u-hjGO" },
-					new SettingsTbl { Key = "BingBasicDevTestKey", Value = "AnucbnJa6mWLbqWhM2daYY -itZKokE2XZJc2AizAIgBYDy0MgEymqZVm7FrZOaRA" },
-					new SettingsTbl { Key = "OrderWays", Value = JsonConvert.SerializeObject(new List<string> { "asc", "desc" }), Type = "json" },
-					new SettingsTbl { Key = "OrderBy", Value = JsonConvert.SerializeObject(new List<string> { "position" }), Type = "json" },
-					new SettingsTbl { Key = "EmailTitle", Value = "Email" },
-					new SettingsTbl { Key = "UnableEmail", Value = "Email is disabled" },
-					new SettingsTbl { Key = "Accept", Value = "OK" },
-					new SettingsTbl { Key = "NotImplemented", Value = "Not implemented yet" },
-					new SettingsTbl { Key = "NoTitle", Value = "Message" },
-					new SettingsTbl { Key = "EmailMsgPlaceholder", Value = "How can we help?" },
-					new SettingsTbl { Key = "EmailMsgMissing", Value = "The Message is not valid" },
-					new SettingsTbl { Key = "EmailFromPlaceholder", Value = "your @email.com" },
-					new SettingsTbl { Key = "EmailFromMissing", Value = "Your Email Address is not valid" },
-					new SettingsTbl { Key = "EmailMsgMinLength", Value = "2", Type = "int" },
-					new SettingsTbl { Key = "EmailFromMinLength", Value = "2", Type = "int" },
-					//public static string OpenLink = "Will open link in Internet browswer";
-					new SettingsTbl { Key = "OpenLink", Value = "" },
-					new SettingsTbl { Key = "Yes", Value = "Yes" },
-					new SettingsTbl { Key = "No", Value = "No" },
-					new SettingsTbl { Key = "Internet", Value = "Internet" },
-					new SettingsTbl { Key = "DBpath", Value = "a" },
-					new SettingsTbl { Key = "Debug", Value = "9", Type = "int" },
-					new SettingsTbl { Key = "PermUseInt", Value = "Do you give permission to load a fresh list from the internet?" },
-					new SettingsTbl { Key = "Error", Value = "Error" },
-					new SettingsTbl { Key = "NoConn", Value = "No connection" },
-					new SettingsTbl { Key = "FailedSave", Value = "Failed to save the feed" },
-					new SettingsTbl { Key = "CompletedInt", Value = "Completed the Internet transfer, for now" },
-					new SettingsTbl { Key = "ConnFailed", Value = "Connection failed" },
-					new SettingsTbl { Key = "UsingLast", Value = "Using last sucessful list" },
-					new SettingsTbl { Key = "Cart", Value = "Basket" },
-					new SettingsTbl { Key = "Added", Value = " has been added" },
-					new SettingsTbl { Key = "Max_tries", Value = "3", Type = "int" },
-					new SettingsTbl { Key = "SubjectLabel", Value = "Subject" },
-					new SettingsTbl { Key = "FromEmailLabel", Value = "Your Email Address" },
-					new SettingsTbl { Key = "MessageLabel", Value = "Message" },
+					//Pages.SetDefaultPages();
+					MySettings = new List<SettingsTbl>
+					{
+						new SettingsTbl { Key = "MyLat", Value = "43.74434", Type = "double" },
+						new SettingsTbl { Key = "MyLong", Value = "-79.29542", Type = "double" },
+						new SettingsTbl { Key = "Address", Value = "24 Hancock Cres, Toronto, ON M1R 2A3" },
+						new SettingsTbl { Key = "Phone", Value = "(+1 647) 956-6145" },
+						new SettingsTbl { Key = "Email", Value = "sales@yumatechnical.com" },
+						new SettingsTbl { Key = "PinLabel", Value = "Home Office" },
+						new SettingsTbl { Key = "Subjects", Value = JsonConvert.SerializeObject(new List<string> { "Customer Service", "Webmaster" }), Type = "json" },
+						new SettingsTbl { Key = "UseInternetMsg", Value = "" },
+						//public static string UseInternetMsg = "We need Internet access for a moment";
+						new SettingsTbl { Key = "UseInternetFinishMsg", Value = "" },
+						//public static string UseInternetFinishMsg = "We completed Internet useage for this moment";
+						new SettingsTbl { Key = "GoogleMapsApi", Value = " AIzaSyBawJKrLXdLhOM1kFKcQiS7YyhhlcTpDbE" },
+						new SettingsTbl { Key = "BingBasicUWPKey", Value = "DUx1HdRMp2GwpUbWhZII~aNt9qFj0ryBsJhczkIlSgQ~Alxhd3MlkZpkaQkB2__tnR1mzeh9fvKHhJzmVBBbIpffTZsxrl2pkxu5f0u-hjGO" },
+						new SettingsTbl { Key = "BingBasicDevTestKey", Value = "AnucbnJa6mWLbqWhM2daYY -itZKokE2XZJc2AizAIgBYDy0MgEymqZVm7FrZOaRA" },
+						new SettingsTbl { Key = "OrderWays", Value = JsonConvert.SerializeObject(new List<string> { "asc", "desc" }), Type = "json" },
+						new SettingsTbl { Key = "OrderBy", Value = JsonConvert.SerializeObject(new List<string> { "position" }), Type = "json" },
+						new SettingsTbl { Key = "EmailTitle", Value = "Email" },
+						new SettingsTbl { Key = "UnableEmail", Value = "Email is disabled" },
+						new SettingsTbl { Key = "Accept", Value = "OK" },
+						new SettingsTbl { Key = "NotImplemented", Value = "Not implemented yet" },
+						new SettingsTbl { Key = "NoTitle", Value = "Message" },
+						new SettingsTbl { Key = "EmailMsgPlaceholder", Value = "How can we help?" },
+						new SettingsTbl { Key = "EmailMsgMissing", Value = "The Message is not valid" },
+						new SettingsTbl { Key = "EmailFromPlaceholder", Value = "your @email.com" },
+						new SettingsTbl { Key = "EmailFromMissing", Value = "Your Email Address is not valid" },
+						new SettingsTbl { Key = "EmailMsgMinLength", Value = "2", Type = "int" },
+						new SettingsTbl { Key = "EmailFromMinLength", Value = "2", Type = "int" },
+						//public static string OpenLink = "Will open link in Internet browswer";
+						new SettingsTbl { Key = "OpenLink", Value = "" },
+						new SettingsTbl { Key = "Yes", Value = "Yes" },
+						new SettingsTbl { Key = "No", Value = "No" },
+						new SettingsTbl { Key = "Internet", Value = "Internet" },
+						new SettingsTbl { Key = "DBpath", Value = "a" },
+						new SettingsTbl { Key = "Debug", Value = "9", Type = "int" },
+						new SettingsTbl { Key = "PermUseInt", Value = "Do you give permission to load a fresh list from the internet?" },
+						new SettingsTbl { Key = "Error", Value = "Error" },
+						new SettingsTbl { Key = "NoConn", Value = "No connection" },
+						new SettingsTbl { Key = "FailedSave", Value = "Failed to save the feed" },
+						new SettingsTbl { Key = "CompletedInt", Value = "Completed the Internet transfer, for now" },
+						new SettingsTbl { Key = "ConnFailed", Value = "Connection failed" },
+						new SettingsTbl { Key = "UsingLast", Value = "Using last sucessful list" },
+						new SettingsTbl { Key = "Cart", Value = "Basket" },
+						new SettingsTbl { Key = "Added", Value = " has been added" },
+						new SettingsTbl { Key = "Max_tries", Value = "3", Type = "int" },
+						new SettingsTbl { Key = "SubjectLabel", Value = "Subject" },
+						new SettingsTbl { Key = "FromEmailLabel", Value = "Your Email Address" },
+						new SettingsTbl { Key = "MessageLabel", Value = "Message" },
+					};
+					//foreach (var Setting in MySettings)
+					//{
+					//	switch (Setting.Type)
+					//	{
+					//		case "int":
+					//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = Setting.Value });
+					//			break;
+					//		case "double":
+					//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
+					//			break;
+					//		case "list":
+					//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
+					//			break;
+					//		default:
+					//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
+					//			break;
+					//	}
+					//}
+					//App.DB.Insert(MyPages);
+					int inserted = App.DB.InsertAll(MySettings);
+					if (MySettings.Count != inserted)
+					{
+						//DisplayAlert(Settings.Error, "Settings could not be inserted", Settings.Accept);
+					}
 				};
-				//foreach (var Setting in MySettings)
-				//{
-				//	switch (Setting.Type)
-				//	{
-				//		case "int":
-				//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = Setting.Value });
-				//			break;
-				//		case "double":
-				//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
-				//			break;
-				//		case "list":
-				//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
-				//			break;
-				//		default:
-				//			MySettings.Add(new SettingsTbl { Key = Setting.Key, Value = JsonConvert.SerializeObject(Setting.Value) });
-				//			break;
-				//	}
-				//}
-				//App.DB.Insert(MyPages);
-				int inserted = App.DB.InsertAll(MySettings);
-				if (MySettings.Count != inserted)
+				MySettings = App.DB.Table<SettingsTbl>().ToList<SettingsTbl>();
+				foreach (var sett in MySettings)
 				{
-					//DisplayAlert(Settings.Error, "Settings could not be inserted", Settings.Accept);
+					if (sett.Type == "json")
+					{
+						var temp = JsonConvert.DeserializeObject(sett.Value);
+						//Settings.object
+						//sett.Value = temp;
+					}
 				}
-			};
-			MySettings = App.DB.Table<SettingsTbl>().ToList<SettingsTbl>();
-			foreach(var sett in MySettings)
-			{
-				if (sett.Type == "json")
-				{
-					var temp = JsonConvert.DeserializeObject(sett.Value);
-					//Settings.object
-					//sett.Value = temp;
-				}
+				Settings = MySettings;
 			}
-			Settings = MySettings;
 		}
 	}
 
@@ -319,4 +352,27 @@ namespace App1
 			return imageSource;
 		}
 	}
+
+	/// <summary>
+	/// converters
+	/// </summary>
+	//public class HtmlSourceConverter : IValueConverter
+	//{
+	//	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	//	{
+	//		var html = new HtmlWebViewSource();
+
+	//		if (value != null)
+	//		{
+	//			html.Html = value.ToString();
+	//		}
+
+	//		return html;
+	//	}
+
+	//	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+	//	{
+	//		throw new NotImplementedException();
+	//	}
+	//}
 }

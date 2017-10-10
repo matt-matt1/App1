@@ -1,0 +1,68 @@
+﻿                <!-- first icon row -->
+                <!--
+                <Grid Grid.Column="1" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf015;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf015;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Website (English)" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Website (English)" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ENButton" Clicked="ENButton_Clicked" />
+                </Grid>
+                
+                <Grid Grid.Column="3" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf005;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf005;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="About Us" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="About Us" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="AboutButton" Clicked="AboutButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="5" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf095;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf095;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Contact Us" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Contact Us" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ContactButton" Clicked="ContactButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="7" Grid.Row="1" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf0ad;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf0ad;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Services" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Services" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="ServicesButton" Clicked="ServicesButton_Clicked" />
+                </Grid>
+                -->
+                <!-- bottom icon row -->
+                <!--
+                <Grid Grid.Column="1" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf024;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf024;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Website (French-Canadian)" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Website (French-Canadian)" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="QCButton" Clicked="QCButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="3" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf109;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf109;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Laptop Computers" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Laptop Computers" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="LaptopsButton" Clicked="LaptopsButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="5" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf02f;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf02f;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Laser Printers" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Laser Printers" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="PrintersButton" Clicked="PrintersButton_Clicked" />
+                </Grid>
+
+                <Grid Grid.Column="7" Grid.Row="3" Padding="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource YumaPanel}">
+                    <Label Text="&#xf150;" Style="{StaticResource YumaIconShadow}" />
+                    <Label Text="&#xf150;" Grid.Row="0" Style="{StaticResource YumaIcon}" />
+                    <Label Text="Toner Cartridges" Grid.Row="1" Style="{StaticResource YumaLabelShadow}" />
+                    <Label Text="Toner Cartridges" Grid.Row="1" Style="{StaticResource YumaLabel}" />
+                    <Button Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource YumaButton}" x:Name="TonersButton" Clicked="TonersButton_Clicked" />
+                </Grid>
+                -->

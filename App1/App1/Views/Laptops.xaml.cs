@@ -26,7 +26,7 @@ namespace App1.Views
 		/// <summary>
 		/// Loads RSS feed and puts into a listview
 		/// </summary>
-		public List<RSSItem> items;
+		public List<RSSItem> items = new List<RSSItem>();
 		//private SQLiteConnection MyDB;
 
 		public async void PutFeedContents() // load and parse RSS feed

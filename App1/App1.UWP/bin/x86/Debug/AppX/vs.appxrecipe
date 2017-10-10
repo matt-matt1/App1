@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d4e6b6d8-12c7-4328-8617-f35a0b9e5559</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Yuma</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=joaqu</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
@@ -19,11 +19,11 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F641CB5F8E03E983BED8468D9DF6099914A743896D955081405698B86288BD22</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>d4e6b6d8-12c7-4328-8617-f35a0b9e5559_1.0.0.0_x86__51zxz5r8njgqr</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>d4e6b6d8-12c7-4328-8617-f35a0b9e5559_51zxz5r8njgqr!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>AE4CD7509C6FFE3EC53CFFCF0F7E4F01E7F4B9A87D1D093190F1AAA21C4831B4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>d4e6b6d8-12c7-4328-8617-f35a0b9e5559_1.0.0.0_x86__nh7s0b45jarrj</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>d4e6b6d8-12c7-4328-8617-f35a0b9e5559_nh7s0b45jarrj!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d4e6b6d8-12c7-4328-8617-f35a0b9e5559</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Yuma</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=joaqu</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-04T22:32:00.640</Modified>
+      <Modified>2017-10-10T14:00:50.027</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2017-10-04T22:31:59.355</Modified>
+      <Modified>2017-10-10T14:00:42.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\.nuget\packages\Microsoft.CSharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -575,6 +575,14 @@
       <PackagePath>Plugin.Connectivity.dll</PackagePath>
       <Modified>2017-09-13T15:08:30.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Yuma\.nuget\packages\Xam.Plugin.Geolocator\5.0.0-beta124\lib\UAP10\Plugin.Geolocator.Abstractions.dll">
+      <PackagePath>Plugin.Geolocator.Abstractions.dll</PackagePath>
+      <Modified>2017-09-13T15:18:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Yuma\.nuget\packages\Xam.Plugin.Geolocator\5.0.0-beta124\lib\UAP10\Plugin.Geolocator.dll">
+      <PackagePath>Plugin.Geolocator.dll</PackagePath>
+      <Modified>2017-09-13T15:18:00.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\.nuget\packages\Xam.Plugin.Iconize\2.0.0.37-beta\lib\uap10.0\Plugin.Iconize.dll">
       <PackagePath>Plugin.Iconize.dll</PackagePath>
       <Modified>2017-09-26T09:35:12.000</Modified>
@@ -625,7 +633,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2017-10-04T22:31:57.550</Modified>
+      <Modified>2017-10-10T14:00:20.114</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -860,9 +868,17 @@
       <PackagePath>App1.UWP.xr.xml</PackagePath>
       <Modified>2017-09-28T16:08:14.055</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\Home.xaml-wasYumaCarousel.txt">
+      <PackagePath>App1\Home.xaml-wasYumaCarousel.txt</PackagePath>
+      <Modified>2017-10-07T15:46:23.481</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\Home.xaml.wasGidIcons.txt">
+      <PackagePath>App1\Home.xaml.wasGidIcons.txt</PackagePath>
+      <Modified>2017-10-07T15:46:25.352</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1\todo.txt">
       <PackagePath>App1\todo.txt</PackagePath>
-      <Modified>2017-10-04T22:31:54.588</Modified>
+      <Modified>2017-10-10T14:02:16.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -879,11 +895,11 @@
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-10-04T15:53:01.776</Modified>
+      <Modified>2017-10-09T19:11:24.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2017-10-04T22:32:00.631</Modified>
+      <Modified>2017-10-10T14:00:50.021</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -916,27 +932,36 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.25507.1</Version>
+      <Version>14.0.25547.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25507.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.25507.1</Version>
+      <Version>14.0.25547.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.25547.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25507.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.25507.1</Version>
+      <Version>14.0.25547.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25507.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25547.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>

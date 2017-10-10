@@ -3,8 +3,14 @@
 *DONE* thin red border, yellow text
 *DONE* add click event to slider
 *DONE* request more height for icons grid
+*DONE* use dynamic list of slide in database
+*DONE* use dynamic list of pages in database
+set slider view as only current slide and clip remainder
+*DONE* make text(caption1) animation work on initial
+make text(caption2) animation fire
 websites:
 remove mybanner for mobile -prestashop ???
+retry message, cannot - no connection
 load css properly
 contact:
 image crop by device.size from center
@@ -13,8 +19,9 @@ prevent fire twice
 put image+desc as html in webview
 hamburger(menu):
 *DONE* list of pages
-convert target string into page, for navigation
-revert buttons - hide x, show =
+*DONE* convert target string into page, for navigation
+*DONE* revert buttons - hide x, show =
 //bind button controlTemplate.overlay isvisible, controlTemplate.drawer animate slide in from right
 nav.back:
-bind button isvisible - true unless on root page then false
+*DONE* make button isvisible - true unless on root page then false
+//bind

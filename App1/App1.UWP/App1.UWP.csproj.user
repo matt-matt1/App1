@@ -8,5 +8,9 @@
     <LargeTileSource>C:\Users\Yuma\OneDrive\Pictures\shop\yumatechnical.com\logos\good3.jpg</LargeTileSource>
     <AppIconSource>C:\Users\Yuma\OneDrive\Pictures\shop\yumatechnical.com\logos\good3.jpg</AppIconSource>
     <SplashScreenSource>C:\Users\Yuma\OneDrive\Pictures\shop\yumatechnical.com\logos\good3.jpg</SplashScreenSource>
+    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>

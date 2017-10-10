@@ -2608,6 +2608,17 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
         "type": "package",
         "dependencies": {
@@ -5275,6 +5286,17 @@
         "runtime": {
           "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
           "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
@@ -7982,6 +8004,17 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
         "type": "package",
         "dependencies": {
@@ -10658,6 +10691,17 @@
         "runtime": {
           "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
           "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
@@ -13374,6 +13418,17 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        }
+      },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
         "type": "package",
         "dependencies": {
@@ -16050,6 +16105,17 @@
         "runtime": {
           "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
           "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
@@ -18764,6 +18830,17 @@
         "runtime": {
           "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
           "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
+      "Xam.Plugin.Geolocator/5.0.0-beta124": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Geolocator.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Geolocator.dll": {}
         }
       },
       "Xam.Plugin.Iconize/2.0.0.37-beta": {
@@ -27763,6 +27840,47 @@
         "xam.plugin.connectivity.nuspec"
       ]
     },
+    "Xam.Plugin.Geolocator/5.0.0-beta124": {
+      "sha512": "9/a1VVnj0Cy40xsqPOEjG8DWdlh9WkcijVfLTIDCw/mEkQWBF6VGkeN/f9x/VF2mdtO4Sh0KQvoPg3QNTMjSDQ==",
+      "type": "package",
+      "path": "xam.plugin.geolocator/5.0.0-beta124",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Geolocator.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Geolocator.dll",
+        "lib/MonoAndroid10/Plugin.Geolocator.pdb",
+        "lib/MonoAndroid10/Plugin.Geolocator.xml",
+        "lib/UAP10/Plugin.Geolocator.Abstractions.dll",
+        "lib/UAP10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/UAP10/Plugin.Geolocator.XML",
+        "lib/UAP10/Plugin.Geolocator.dll",
+        "lib/UAP10/Plugin.Geolocator.pdb",
+        "lib/UAP10/Plugin.Geolocator.pri",
+        "lib/Xamarin.Mac20/Plugin.Geolocator.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.Geolocator.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.Geolocator.dll",
+        "lib/Xamarin.Mac20/Plugin.Geolocator.pdb",
+        "lib/Xamarin.Mac20/Plugin.Geolocator.xml",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.dll",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.pdb",
+        "lib/Xamarin.iOS10/Plugin.Geolocator.xml",
+        "lib/XamarinTVOS/Plugin.Geolocator.Abstractions.dll",
+        "lib/XamarinTVOS/Plugin.Geolocator.Abstractions.pdb",
+        "lib/XamarinTVOS/Plugin.Geolocator.dll",
+        "lib/XamarinTVOS/Plugin.Geolocator.pdb",
+        "lib/netstandard1.0/Plugin.Geolocator.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Geolocator.deps.json",
+        "lib/netstandard1.0/Plugin.Geolocator.dll",
+        "lib/netstandard1.0/Plugin.Geolocator.pdb",
+        "lib/netstandard1.0/Plugin.Geolocator.xml",
+        "readme.txt",
+        "xam.plugin.geolocator.5.0.0-beta124.nupkg.sha512",
+        "xam.plugin.geolocator.nuspec"
+      ]
+    },
     "Xam.Plugin.Iconize/2.0.0.37-beta": {
       "sha512": "oLiZmyjtt3hHx89dyuvzeJOds/qpXWWtbly9tkFZOgi4XpedRTUkS+sxp5t23K5FvoU/SFZ0YUMxE5PPnXl65w==",
       "type": "package",
@@ -28158,6 +28276,7 @@
       "System.Net.Http >= 4.3.3",
       "Xam.FormsPlugin.Iconize >= 1.5.0.13-beta",
       "Xam.Plugin.Connectivity >= 4.0.0-beta139",
+      "Xam.Plugin.Geolocator >= 5.0.0-beta124",
       "Xam.Plugin.Iconize >= 2.0.0.37-beta",
       "Xam.Plugin.Iconize.FontAwesome >= 2.0.0.37-beta",
       "Xam.Plugins.Messaging >= 4.0.0",
@@ -28205,6 +28324,7 @@
       "System.Net.Http": "4.3.3",
       "Xam.FormsPlugin.Iconize": "1.5.0.13-beta",
       "Xam.Plugin.Connectivity": "4.0.0-beta139",
+      "Xam.Plugin.Geolocator": "5.0.0-beta124",
       "Xam.Plugin.Iconize": "2.0.0.37-beta",
       "Xam.Plugin.Iconize.FontAwesome": "2.0.0.37-beta",
       "Xam.Plugins.Messaging": "4.0.0",

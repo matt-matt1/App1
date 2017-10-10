@@ -1,0 +1,76 @@
+﻿            <!--<Grid ColumnSpacing="0" RowSpacing="0" Margin="0" Padding="0">
+                <ScrollView Orientation="Horizontal" x:Name="sliderScroll" Margin="0" Padding="0">
+                    <StackLayout Spacing="0" Orientation="Horizontal" x:Name="sliderStack" Margin="0" Padding="0">
+                        <Grid x:Name="slide_1" Margin="0" Padding="0" WidthRequest="1110">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="PrintersButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Printers_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-printers.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Printers_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Laser Printers" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Laser Printers" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Laser Printers" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Laser Printers" Style="{StaticResource Caption1}" />
+                            </Grid>
+                        </Grid>
+                        <Grid x:Name="slide_2" Margin="0" Padding="0" WidthRequest="1110">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TonersButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Cartridges_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-cartridges.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Toners_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Quality Toner Cartridges" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Quality Toner Cartridges" Style="{StaticResource Caption1}" />
+                            </Grid>
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Toners_txt2slider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="That Last" Style="{StaticResource Caption2Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="That Last" Style="{StaticResource Caption2Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="That Last" Style="{StaticResource Caption2Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="That Last" Style="{StaticResource Caption2}" />
+                            </Grid>
+                        </Grid>
+                        <Grid x:Name="slide_3" Margin="0" Padding="0" WidthRequest="1110">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LaptopsButton_Clicked" />
+                            </Grid.GestureRecognizers>
+                            <Image x:Name="Laptops_imgslider" Source="{local:ImageResource App1.Images.slider.home-slider-laptops.jpg}" />
+                            <Grid Grid.Row="0" Grid.Column="0" x:Name="Laptops_txtslider">
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="3" TranslationY="3" Text="Computer Laptops" Style="{StaticResource Caption1Shadow2}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="4" TranslationY="4" Text="Computer Laptops" Style="{StaticResource Caption1Shadow}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="0" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="0" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="2" TranslationY="2" Text="Computer Laptops" Style="{StaticResource Caption1Out}" />
+                                <Label Grid.Row="0" Grid.Column="0" TranslationX="1" TranslationY="1" Text="Computer Laptops" Style="{StaticResource Caption1}" />
+                            </Grid>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>-->

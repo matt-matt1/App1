@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -15,8 +17,12 @@ namespace App1.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Contact : ContentPage
 	{
+		private double deviceWidth = 0;
+		private double deviceHeight = 0;
 		public bool FirstTimeAppearing { get; set; }
-		public Map Map { get; set; }
+		//public Map Map { get; set; }
+		public BindableMap Map { get; set; }
+		//public RouteMap Map { get; set; }
 		public Position Position { get; set; }
 		public MapSpan MapSpan { get; set; }
 		public Boolean IsLoading { get; }
@@ -26,9 +32,12 @@ namespace App1.Views
 			FirstTimeAppearing = true;
 			InitializeComponent();
 
+			stack.SizeChanged += GetDeviceDimentions;
+			//mapStaticImage.SizeChanged += PositionImage;
+
 			SetupForm();	// load text from form fields, etc.
 			//tempImgRL = CenterImageInRelativeLayout.BuildGridElement(new Image { Source = "App1.Images.map.jpg" });
-			var inner = new Image { Source = ImageSource.FromResource("App1.Images.map.jpg") };
+			//var inner = new Image { Source = ImageSource.FromResource("App1.Images.map.jpg") };
 			//tempImgRL.Children.Add(inner,
 			//	Constraint.RelativeToParent((parent) => { return (parent.Width - inner.Width) / 2; }),
 			//	Constraint.RelativeToParent((parent) => { return (parent.Height - inner.Height) / 2; }),
@@ -43,15 +52,16 @@ namespace App1.Views
 			//if (FirstTimeAppearing)
 			//{
 				FirstTimeAppearing = false;
-				var t1 = SetupMap();//await SetupMap();
+				SetupMap();//await SetupMap();
+//			var t1 = SetupMap();//await SetupMap();
 			//}
-			while (!t1.IsCompleted)
-			{
-				t1.Start();
-				t1.Wait();
-			}
-			stack.Children.Remove(mapStaticImage);
-			stack.Children.Insert(1, Map);
+//			while (!t1.IsCompleted)
+//			{
+//				t1.Start();
+//				t1.Wait();
+//			}
+			//stack.Children.Remove(mapStaticImage);
+			//stack.Children.Insert(1, Map);
 		}
 		protected override void OnDisappearing()
 		{
@@ -59,6 +69,26 @@ namespace App1.Views
 
 			//Map.Pins.Clear();
 		}
+
+		void GetDeviceDimentions(object sender, EventArgs e)
+		{
+			deviceWidth = stack.Width;
+			deviceHeight = stack.Height;
+		}
+		void PositionImage(object sender, EventArgs e)
+		{
+			//var iwidth = mapStaticImage.Width;
+			//var iheight = mapStaticImage.Height;
+			//1822x828
+			double iwidth = 1822;
+			double iheight = 828;
+			var x = (iwidth - deviceWidth) / 2;
+			var y = (iheight - deviceHeight) / 2;
+			//myScoll.Content = new Image { HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.Center, Source = ImageSource.FromResource("App1.Images.map.jpg") };
+			//<Image x:Name="mapStaticImage" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Source="{local:ImageResource App1.Images.map.jpg}" />
+			//myScoll.ScrollToAsync(x, y, false);
+		}
+		
 
 		void SetupForm()
 		{
@@ -74,18 +104,76 @@ namespace App1.Views
 			Send.Clicked += OnSend_clicked;
 		}
 
-		async Task SetupMap()
+		private Position _myPosition = new Position(Settings.MyLat, Settings.MyLong);//-37.8141, 144.9633);
+		public Position MyPosition
 		{
+			get { return _myPosition; }
+			set
+			{
+				_myPosition = value; OnPropertyChanged();
+			}
+		}
+		private ObservableCollection<Pin> _pinCollection = new ObservableCollection<Pin>();
+		public ObservableCollection<Pin> PinCollection
+		{
+			get { return _pinCollection; }
+			set
+			{
+				_pinCollection = value; OnPropertyChanged();
+			}
+		}
+		async Task SetupMap()//async Task//public void 
+		{
+			//await Task.Run(Action);
+			//var indicator = new ActivityIndicator { Color = new Color(.5), };
+			//indicator.SetBinding(ActivityIndicator.IsRunningProperty, "IsLoading");
+			//indicator.BindingContext = Map;
+			////var companies = await Company.GetCarwashesAsync();
+			Map = new BindableMap();// Map();// CompanyMap(companies);
+			//				//MapView.Children.Add(Map);
+			//Position = new Position(Settings.MyLat, Settings.MyLong);
+			//MapSpan = MapSpan.FromCenterAndRadius(Position, Distance.FromKilometers(2.4));
+			//Map.Pins.Add(new Pin { Label = Settings.PinLabel, Type = PinType.Place, Address = Settings.Address, Position = Position });
+			//Map.MoveToRegion(MapSpan);
+
 			var indicator = new ActivityIndicator { Color = new Color(.5), };
 			indicator.SetBinding(ActivityIndicator.IsRunningProperty, "IsLoading");
 			indicator.BindingContext = Map;
 			//var companies = await Company.GetCarwashesAsync();
-			Map = new Map();// CompanyMap(companies);
+			//Map = new RouteMap();// Map();// CompanyMap(companies);
 							//MapView.Children.Add(Map);
+//			await Task.WhenAll(
 			Position = new Position(Settings.MyLat, Settings.MyLong);
 			MapSpan = MapSpan.FromCenterAndRadius(Position, Distance.FromKilometers(2.4));
-			Map.Pins.Add(new Pin { Label = Settings.PinLabel, Type = PinType.Place, Address = Settings.Address, Position = Position });
+			PinCollection.Add(new Pin { Label = Settings.PinLabel, Type = PinType.Place, Address = Settings.Address, Position = Position });
+			//Map.Pins.Add(new Pin { Label = Settings.PinLabel, Type = PinType.Place, Address = Settings.Address, Position = Position });
 			Map.MoveToRegion(MapSpan);
+			//Map.MoveToRegion(MapSpan);
+			//			);
+			if (CrossGeolocator.IsSupported)
+			{
+				//var customMap = new CustomMap
+				//{
+				//	MapType = MapType.Street,
+				//	WidthRequest = App.ScreenWidth,
+				//	HeightRequest = App.ScreenHeight
+				//};
+
+//				var position = await Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync();
+//				MyPosition = new Position(position.Latitude, position.Longitude);
+//				PinCollection.Add(new Pin()
+//				{
+//					Position = MyPosition,
+//					Type = PinType.Generic,
+//					Label = "I'm here"
+//				});
+//				Map.RouteCoordinates.Add(MyPosition);
+			}
+			foreach (var pin in PinCollection)
+			{
+				Map.Pins.Add(pin);
+			}
+			stack.Children.Insert(1, Map);
 		}
 
 		// event handlers

@@ -8,9 +8,9 @@
              NavigationPage.HasBackButton="False"
              Title="About Us">
     <ContentPage.Content>
-        <Grid>
+        <Grid x:Name="mainGrid">
             <Image Grid.Row="0" Grid.Column="0" x:Name="Loading" Source="{local:ImageResource App1.Images.loader.gif}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsVisible="False" />
-            <WebView Grid.Row="0" Grid.Column="0" Source="http://yumatechnical.com/en/content/4-about-us?content_only=1" Navigating="OnNavigating" Navigated="OnNavigated" WidthRequest="10000" HeightRequest="10000" />
+            <!--<WebView Grid.Row="0" Grid.Column="0" Source="http://yumatechnical.com/en/content/4-about-us?content_only=1" Navigating="OnNavigating" Navigated="OnNavigated" WidthRequest="10000" HeightRequest="10000" />-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

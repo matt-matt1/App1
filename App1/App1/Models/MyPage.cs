@@ -18,8 +18,10 @@ namespace App1.Models
 		public bool InGrid { get; set; }
 		public int Row { get; set; }
 		public int Column { get; set; }
-		[MaxLength(250)]
+		[MaxLength(10)]
 		public string Icon { get; set; }
+		[MaxLength(10)]
+		public string Unicode { get; set; }
 		public bool InMenu { get; set; }
 		//[MaxLength(250), Unique]
 		public string TargetEvent { get; set; }

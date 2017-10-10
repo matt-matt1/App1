@@ -26,7 +26,7 @@ namespace App1.Views
 		/// <summary>
 		/// Loads RSS feed and puts into a listview
 		/// </summary>
-		public List<RSSItem> items;
+		public List<RSSItem> items = new List<RSSItem>();
 		//private SQLiteConnection MyDB;
 
 		public async void PutFeedContents() // load and parse RSS feed
@@ -107,7 +107,7 @@ namespace App1.Views
 				}
 			}
 			//else
-			{
+			//{
 				var myItems = App.DB.Table<TonersTbl>();
 				foreach (var item in myItems)
 				{
@@ -117,17 +117,17 @@ namespace App1.Views
 					};
 					this.items.Add(new RSSItem
 					{
-						Title = item.Title,
-						Description = item.Description,
-						Image = item.Image,
-						Link = item.Link,
+						Title = item?.Title,
+						Description = item?.Description,
+						Image = item?.Image,
+						Link = item?.Link,
 						ID = item.Id,
-						MyDesc = item.MyDesc,
-						Desc = htmlSource.Html
+						MyDesc = item?.MyDesc,
+						Desc = htmlSource?.Html
 					});
 				}
 				//this.items = App.DB.Table<ServicesTbl>();//.ToList();
-			}
+			//}
 			this.list.ItemsSource = this.items;   // put in listview
 			Loading.IsVisible = false;  // set loading off
 			list.IsVisible = true;

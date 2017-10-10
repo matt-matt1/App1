@@ -35,6 +35,10 @@ namespace App1.Droid
 
 			LoadApplication(new App(dbPath));
 		}
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)//XAM Plugin Geolocation
+		{
+			PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
 	}
 }
 

@@ -51,14 +51,15 @@
             <!--<RelativeLayout x:Name="tempImgRL">
                 <BoxView Color="Green" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Factor=1, Property=Width}"
                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Factor=1, Property=Height}" />-->
-                <Image x:Name="mapStaticImage" HorizontalOptions="Center"
-                       VerticalOptions="Center" Source="{local:ImageResource App1.Images.map.jpg}" />
+            <!--<ScrollView x:Name="myScoll" Orientation="Both">
+                <Image x:Name="mapStaticImage" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Source="{local:ImageResource App1.Images.map.jpg}" />
+            </ScrollView>-->
             <!--</RelativeLayout>-->
             <!--
                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=Device.Width*0.5}"
                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.5, Constant=Device.Height*0.5}"
             -->
-            <!--<maps2:BindableMap MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />-->
+            <!--<local:BindableMap MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />-->
             <!--<maps:Map x:Name="mymap" MapType="Street" >
                 -->
             <!--IsVisible="False"-->

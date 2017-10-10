@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="d4e6b6d8-12c7-4328-8617-f35a0b9e5559" Publisher="CN=Yuma" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="d4e6b6d8-12c7-4328-8617-f35a0b9e5559" Publisher="CN=joaqu" Version="1.0.0.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="d4e6b6d8-12c7-4328-8617-f35a0b9e5559" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>App1.UWP</DisplayName>

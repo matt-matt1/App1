@@ -527,3 +527,9 @@ C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\Plug
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\Xamarin.Forms.Maps.UWP.pri.xml
 C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Core\ForBundle\AppxManifest.xml
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Plugin.Geolocator.Abstractions.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Plugin.Geolocator.Abstractions.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Plugin.Geolocator.dll
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\bin\x86\Debug\Plugin.Geolocator.pdb
+C:\Users\Yuma\Documents\Visual Studio 2017\App1\App1\App1.UWP\obj\x86\Debug\Plugin.Geolocator.pri.xml

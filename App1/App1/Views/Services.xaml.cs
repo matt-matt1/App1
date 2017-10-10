@@ -23,14 +23,14 @@ namespace App1.Views
 			InitializeComponent();
 
 			PutFeedContents();
+			list.ItemSelected += OnSelectRSS; // link tap event to handler
 		}
 
 
 		/// <summary>
 		/// Loads RSS feed and puts into a listview
 		/// </summary>
-		public List<RSSItem> items;
-		//private SQLiteConnection MyDB;
+		public List<RSSItem> items = new List<RSSItem>();
 
 		public async void PutFeedContents() // load and parse RSS feed
 		{
@@ -80,14 +80,14 @@ namespace App1.Views
 							DBentries.Add(new ServicesTbl { Desc = ritem.Desc, Description = ritem.Description, Image = ritem.Image, Link = ritem.Link, MyDesc = ritem.MyDesc, Title = ritem.Title });
 						}
 						int inDB = App.DB.InsertAll(DBentries);//.ToList<ServicesTbl>()
-														   //ServicesDB.InsertAll((List<ServicesTbl>)items);
 						if (inDB != inRSS)
 							await DisplayAlert((Settings.Error != "") ? Settings.Error : "Error",
 								(Settings.FailedSave != "") ? Settings.FailedSave : "Failed to save the feed",
 								(Settings.Accept != "") ? Settings.Accept : "OK");
-						//await DisplayAlert((Settings.Internet != "") ? Settings.Internet : "Internet",
-						//	(Settings.CompletedInt != "") ? Settings.CompletedInt : "Completed the Internet transfer, for now",
-						//	(Settings.Accept != "") ? Settings.Accept : "OK");
+						if (true || Settings.Debug > 0)
+							await DisplayAlert((Settings.Internet != "") ? Settings.Internet : "Internet",
+								(Settings.CompletedInt != "") ? Settings.CompletedInt : "Completed the Internet transfer, for now",
+								(Settings.Accept != "") ? Settings.Accept : "OK");
 					}
 					catch (Exception ex)
 					{
@@ -101,40 +101,30 @@ namespace App1.Views
 					await DisplayAlert((Settings.Internet != "") ? Settings.Internet : "Internet",
 						msg + ". " + msg2,
 						(Settings.Accept != "") ? Settings.Accept : "OK");
-					//this.items = App.DB.Table<ServicesTbl>();//.ToList();
-					//var myItems = App.DB.Table<ServicesTbl>();//.ToList();
-					//foreach(var item in myItems)
-					//{
-					//	this.items.Add(new RSSItem { Title = item.Title, Desc = item.Desc, Description = item.Description, Image = item.Image, Link = item.Link, ID = item.ID, MyDesc = item.MyDesc });
-					//}
 				}
 			}
-			//else
+			var myItems = App.DB.Table<ServicesTbl>();
+			foreach (var item in myItems)
 			{
-				var myItems = App.DB.Table<ServicesTbl>();
-				foreach (var item in myItems)
+				var htmlSource = new HtmlWebViewSource
 				{
-					var htmlSource = new HtmlWebViewSource
-					{
-						Html = item.Desc
-					};
-					this.items.Add(new RSSItem
-					{
-						Title = item.Title,
-						Description = item.Description,
-						Image = item.Image,
-						Link = item.Link,
-						ID = item.Id,
-						MyDesc = item.MyDesc,
-						Desc = htmlSource.Html
-					});
-				}
-				//this.items = App.DB.Table<ServicesTbl>();//.ToList();
+					Html = @"<html><body>" + item.Desc + "</body></html>"
+				};
+				this.items.Add(new RSSItem
+				{
+					Title = item.Title,
+					Description = item.Description,
+					Image = item.Image,
+					Link = item.Link,
+					ID = item.Id,
+					MyDesc = item.MyDesc,
+					Desc = htmlSource.Html
+				});
 			}
 			this.list.ItemsSource = this.items;   // put in listview
 			Loading.IsVisible = false;  // set loading off
 			list.IsVisible = true;
-			list.ItemSelected += OnSelectRSS; // link tap event to handler
+			//list.ItemSelected += OnSelectRSS; // link tap event to handler
 
 			var moreAction = new MenuItem { Text = "Add to Basket" };
 			moreAction.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
@@ -145,18 +135,18 @@ namespace App1.Views
 		/// <summary>
 		/// events
 		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
 		void OnSelectRSS(Object sender, SelectedItemChangedEventArgs e)
 		{
-			//if (e.SelectedItem == null || ((ListView)sender).SelectedItem == null)
-			//{
-			//	return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
-			//}
-			if (e.SelectedItem != null && ((ListView)sender).SelectedItem != null)
+			if (e.SelectedItem == null || ((ListView)sender).SelectedItem == null)
 			{
-				((ListView)sender).SelectedItem = null;
+				return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+			}
+			try
+			{
 				var link = this.items[this.items.IndexOf((RSSItem)e.SelectedItem)].Link;
+
+				((ListView)sender).SelectedItem = null;
+				e = null;
 				if (Settings.OpenLink != "")
 				{
 					if (DisplayAlert((Settings.Internet != "") ? Settings.Internet : "Internet", (Settings.OpenLink != "") ? Settings.OpenLink : "OpenLink",
@@ -166,6 +156,18 @@ namespace App1.Views
 				}
 				Device.OpenUri(new Uri(link));
 			}
+			catch (Exception)
+			{
+				sender = null;
+				((ListView)sender).SelectedItem = null;
+				e = null;
+				return;
+			}
+			//var q = ((RSSItem)e.SelectedItem);
+			//if (e.SelectedItem != null && q != null && ((ListView)sender).SelectedItem != null)
+				//if (e.SelectedItem != null && ((ListView)sender).SelectedItem != null)
+				//{
+				//}
 		}
 		public void AddToCart(object sender, EventArgs e)
 		{
